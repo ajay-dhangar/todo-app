@@ -12,7 +12,7 @@ function Register() {
 		event.preventDefault();
 	
 		try {
-			const response = await axios.post('http://localhost:8000/user/register', {
+			const response = await axios.post('https://mern-todo-app-0pnc.onrender.com/user/register', {
 				email: email,
 				password: password,
 			});

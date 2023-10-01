@@ -14,7 +14,8 @@ const Home = () => {
             <li><Link to='/register'>Register</Link></li>
             <li><Link to='/login'>Login</Link></li>
             <li><Link to='/todolist'>TodoList</Link></li>
-            <li>Email: {email}</li>
+            <li><Link to='/logout'>LogOut</Link></li>
+            <li>{email}</li>
           </ul>
         </nav>
       </div>
