@@ -10,16 +10,6 @@ function Login() {
   async function loginUser(event) {
     event.preventDefault();
 
-<<<<<<< HEAD
-    try {
-      const response = await axios.post('https://mern-todo-app-0pnc.onrender.com/user/login', {
-        email: email,
-        password: password,
-      });
-=======
-	async function loginUser(event) {
-		event.preventDefault();
-	
 		try {
 			const response = await axios.post('https://mern-todo-app-0pnc.onrender.com/user/login', {
 				email: email,
@@ -39,7 +29,6 @@ function Login() {
 			alert('Login failed. Please try again later.');
 		}
 	}
->>>>>>> 14a26278bc6f92be779a4dbf9bd5a10e2371b60d
 
       console.log(response.data);
 
@@ -82,8 +71,4 @@ function Login() {
   );
 }
 
-<<<<<<< HEAD
-export default Login;
-=======
 export default Login
->>>>>>> 14a26278bc6f92be779a4dbf9bd5a10e2371b60d
