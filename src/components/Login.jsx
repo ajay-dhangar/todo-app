@@ -10,33 +10,19 @@ function Login() {
   async function loginUser(event) {
     event.preventDefault();
 
-		try {
-			const response = await axios.post('https://mern-todo-app-0pnc.onrender.com/user/login', {
-				email: email,
-				password: password,
-			});
-	
-			console.log(response.data);
-	
-			if (response.data.token) {
-				localStorage.setItem('token', response.data.token);
-				Navigate('/');
-			} else {
-				alert('Login failed. Please check your details.');
-			}
-		} catch (error) {
-			console.error(error);
-			alert('Login failed. Please try again later.');
-		}
-	}
+    try {
+      const response = await axios.post('https://mern-todo-app-0pnc.onrender.com/user/login', {
+        email: email,
+        password: password,
+      });
 
       console.log(response.data);
-
+      
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('email', response.data.email);
         navigate('/');
-      } 
+      }
     } catch (error) {
       console.error(error.response.data);
       alert('Login failed. Please try again later.');
@@ -69,6 +55,7 @@ function Login() {
       </form>
     </div>
   );
+
 }
 
-export default Login
+export default Login;
