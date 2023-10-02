@@ -7,8 +7,7 @@ function Logout() {
   function handleLogout() {
 
     localStorage.removeItem('token');
-    localStorage.removeItem('email');
-    
+    localStorage.removeItem('email');   
 
     navigate('/login');
   }
